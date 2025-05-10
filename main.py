@@ -1,8 +1,8 @@
 import requests
 import time
 
-BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
-JOIN_URL = 'https://joinjoaomgcd.appspot.com/_ah/api/messaging/v1/sendPush?title=Baby%20Location%20Command&text=/getbabylocation&deviceId=YOUR_DEVICE_ID&apikey=YOUR_API_KEY'
+BOT_TOKEN = os.environ['BOT_TOKEN']
+JOIN_URL = os.environ['JOIN_URL']
 
 def get_updates(offset=None):
     url = f'https://api.telegram.org/bot{BOT_TOKEN}/getUpdates'
